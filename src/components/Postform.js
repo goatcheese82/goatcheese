@@ -5,7 +5,7 @@ export default class Postform extends Component {
         super(props);
         this.state = {
             title: '',
-            body: ''
+            content: ''
         }
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -20,9 +20,9 @@ export default class Postform extends Component {
 
         const post= {
             title: this.state.title,
-            body: this.state.body
+            content: this.state.content
         }
-        fetch('https://jsonplaceholder.typicode.com/posts', {
+        fetch('http://localhost:3001/posts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ export default class Postform extends Component {
             </div>
             <div>
                 <label>Content: </label>
-                <input type='textarea' name='body' value={this.state.body} onChange={this.onChange}></input>
+                <input type='textarea' name='content' value={this.state.content} onChange={this.onChange}></input>
             </div>
             <button type='submit'>Submit</button>
 
