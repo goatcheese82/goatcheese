@@ -8,3 +8,18 @@ export const fetchPosts = () => dispatch => {
             payload: posts
         })); 
 }
+
+export const newPost = postData => dispatch => {
+    fetch('http://localhost:3001/posts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(postData)
+        })
+        .then(res => res.json())
+        .then(post => dispatch({
+            type: NEW_POST,
+            payload: post
+        }));
+}
