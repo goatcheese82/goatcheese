@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { createPost } from '../actions/postActions';
+import { newPost } from '../actions/postActions';
 import { connect } from 'react-redux';
 
-export default class Postform extends Component {
+class Postform extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,8 +24,8 @@ export default class Postform extends Component {
         const post= {
             title: this.state.title,
             content: this.state.content
-        }
-        
+        };
+        this.props.newPost(post)
 
     }
   render() {
@@ -48,3 +48,5 @@ export default class Postform extends Component {
     )
   }
 }
+
+export default connect(null, { newPost })(Postform);
