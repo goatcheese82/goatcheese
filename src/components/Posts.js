@@ -10,14 +10,14 @@ class Posts extends Component {
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.newPost) {
-      this.props.posts.unshift(nextProps.newPost)
+      this.props.posts.push(nextProps.newPost)
 
     }
   }
 
   render() {
     const postItems =  this.props.posts.map(post => (
-      <div key={post.id}>
+      <div key={post.id} className='post'>
         <h3>{post.title}</h3>
         <p>{post.content}</p>
       </div>

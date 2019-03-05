@@ -1,12 +1,9 @@
 .App {
-  
+  display: flex;
+  justify-content: left;
+  align-items: center;
   margin: auto;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  padding: 10px;
 }
 
 .App-header {
@@ -20,8 +17,16 @@
   color: white;
 }
 
+.blog {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 Label {
-  color: #ff3333;
+
+  color: #fff;
   text-align: center;
 }
 
@@ -29,6 +34,45 @@ Label {
   color: #61dafb;
 }
 
+.post-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.post {
+  display: flex;
+  background-color: aqua;
+  border-bottom: 4px red;
+  justify-content: center;
+  align-content: space-between;
+  color: #8822ff;
+  text-shadow: 1px 1px #000;
+  padding: 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  background-color: #8822ff;
+  width: 100%;
+}
+
+form {
+  display: flexbox;
+  background-color: #8822ff;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,3 +81,4 @@ Label {
     transform: rotate(360deg);
   }
 }
+

@@ -3,10 +3,9 @@ import './App.css';
 import { Provider } from 'react-redux';
 import Posts from './components/Posts';
 import Postform from './components/Postform';
-import {createStore, applyMiddleware } from 'redux';
 import store from './store'
+import Nav from './components/Nav';
 
-//const store = createStore(() => [], {}, applyMiddleware());
 
 
 class App extends Component {
@@ -14,9 +13,17 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          < Postform />
-          < Posts />
-
+          <div className='blog'>
+            <div className='post-container'>
+              < Posts />
+            </div>
+            <div className='form-container'>
+              < Postform />
+            </div>
+          </div>
+          <nav>
+            < Nav />
+          </nav>
         </div>
       </Provider>
     );
