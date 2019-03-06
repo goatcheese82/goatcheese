@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import Posts from './components/Posts';
 import Postform from './components/Postform';
 import store from './store'
-import Nav from './components/Nav';
 
 
 
@@ -21,11 +20,6 @@ class App extends Component {
               < Postform />
             </div>
           </div>
-          <nav>
-            <div>
-            < Nav />
-            </div>
-          </nav>
         </div>
       </Provider>
     );
