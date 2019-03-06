@@ -9,29 +9,29 @@ class Posts extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.newPost) {
+    if (nextProps.newPost) {
       this.props.posts.push(nextProps.newPost)
 
     }
   }
 
   render() {
-    const postItems =  this.props.posts.map(post => (
+    const postItems = this.props.posts.map(post => (
       <div key={post.id} className='post'>
+        <h2>{post.my_time}</h2>
         <h3>{post.title}</h3>
         <p>{post.content}</p>
       </div>
     ))
     return (
       <div>
-        <h1>Posts</h1>
         {postItems}
       </div>
     )
   }
 }
 
-Posts.propTypes  = {
+Posts.propTypes = {
   fetchPosts: PropTypes.func.isRequired,
   posts: PropTypes.array.isRequired,
   newPost: PropTypes.object

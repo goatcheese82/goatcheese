@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { newPost } from '../actions/postActions';
 import { connect } from 'react-redux';
 
@@ -35,7 +34,7 @@ class Postform extends Component {
   render() {
     return (
       <div>
-        <h1>Add Post</h1>
+        <h1>Add a Thought</h1>
         <form onSubmit={this.onSubmit}>
             <div className='form-field'>
                 <label>Title: </label>

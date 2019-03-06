@@ -22,7 +22,9 @@ class App extends Component {
             </div>
           </div>
           <nav>
+            <div>
             < Nav />
+            </div>
           </nav>
         </div>
       </Provider>
