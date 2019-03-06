@@ -2,26 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Nav from './components/Nav';
+import Home from './Home'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import Postform from './components/Postform';
 
-const Home = () => {
-    return (
-        <div>
-            < App />
-            <nav>
-            <div>
-              < Nav />
-            </div>
-          </nav>
-        </div>
-    )
-}
 
 ReactDOM.render((
     <Router>
-        <Route path="/" render={Home} />
+        <React.Fragment>
+            <Route path="/" component={Home} />
+            <Route exact path="/thoughts" component={App} />
+        </React.Fragment>
     </Router>),
     document.getElementById('root'));
 

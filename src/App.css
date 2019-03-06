@@ -3,14 +3,9 @@
   justify-content: left;
   align-items: center;
   margin: auto;
-  padding: 10px;
 }
 
-nav {
-  width: 10%;
-  height: 100%;
-  background-color: aquamarine;
-}
+
 
 h1 {
   color: #fff;
@@ -29,7 +24,7 @@ h1 {
 }
 
 .blog {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
