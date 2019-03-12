@@ -1,10 +1,10 @@
-import { FETCH_POSTS, NEW_POST } from './types';
+import { postActions } from './types';
 
 export const fetchPosts = () => dispatch => {
         fetch('http://localhost:3001/posts')
         .then(res => res.json())
         .then(posts => dispatch({
-            type: FETCH_POSTS,
+            type: postActions.FETCH_POSTS,
             payload: posts
         })); 
 }
@@ -19,7 +19,7 @@ export const newPost = postData => dispatch => {
         })
         .then(res => res.json())
         .then(post => dispatch({
-            type: NEW_POST,
+            type: postActions.NEW_POST,
             payload: post
         }));
 }
