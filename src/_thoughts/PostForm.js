@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { newPost } from '../actions/postActions';
 import { connect } from 'react-redux';
 
-class Postform extends Component {
+class PostForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,4 +52,4 @@ class Postform extends Component {
   }
 }
 
-export default connect(null, { newPost })(Postform);
+export default connect(null, { newPost })(PostForm);

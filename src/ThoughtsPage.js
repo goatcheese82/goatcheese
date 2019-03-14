@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Posts from './_thoughts/Posts';
+import PostForm from './_thoughts/PostForm';
 
 export default class ThoughtsPage extends Component {
   render() {
@@ -10,13 +12,9 @@ export default class ThoughtsPage extends Component {
               < Posts />
             </div>
             <div className='form-container'>
-              < Postform />
+              < PostForm />
             </div>
           </div>
-          <div className='form-container'>
-             < Users />
-          </div>
-
         </div>
       </div>
     )

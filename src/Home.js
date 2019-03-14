@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Posts from './_thoughts/Posts';
-import Postform from './_thoughts/Postform';
+import PostForm from './_thoughts/PostForm';
 import Users from './_users/Users';
 import UserForm from './_users/UserForm';
 
@@ -14,16 +14,9 @@ export default class Home extends Component {
               < Posts />
             </div>
             <div className='form-container'>
-              < Postform />
+              < PostForm />
             </div>
           </div>
-          <div className='form-container'>
-             < Users />
-          </div>
-          <div className='form-container'>
-          < UserForm />
-          </div>
-
         </div>
       </div>
     )
