@@ -1,14 +1,25 @@
-export const userActions = {
-    login,
-    logout,
-    register,
-    getAll,
-    delete: _delete
-};
+import { userTypes } from './types'
 
-function login(username, passord) {
-    return dispatch => {
-        dispatchEvent(request({ username }));
-        
-    }
+export const fetchUsers = () => dispatch => {
+    fetch('http://localhost:3001/users')
+    .then(res => res.json())
+    .then(Users => dispatch({
+        type: userTypes.FETCH_USERS,
+        payload: Users
+    })); 
+}
+
+export const newUser = userData => dispatch => {
+fetch('http://localhost:3001/users', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(res => res.json())
+    .then(user => dispatch({
+        type: userTypes.NEW_USER,
+        payload: user
+    }));
 }

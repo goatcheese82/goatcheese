@@ -1,4 +1,4 @@
-import { postTypes} from '../actions/types';
+import { userTypes} from '../actions/types';
 
 const initialState = {
     items: [],
@@ -7,12 +7,12 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        case postTypes.FETCH_POSTS:
+        case userTypes.FETCH_USERS:
             return {
                 ...state,
                 items: action.payload
             };
-        case postTypes.NEW_POST:
+        case userTypes.NEW_USER:
             return {
                 ...state,
                 item: action.payload

@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Home from './Home'
+import Home from './Home';
+import Register from './Register';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import Postform from './components/Postform';
@@ -13,6 +14,7 @@ ReactDOM.render((
         <React.Fragment>
             <Route path="/" component={Home} />
             <Route exact path="/thoughts" component={App} />
+            <Route exact path="/register" component={Register} />
         </React.Fragment>
     </Router>),
     document.getElementById('root'));

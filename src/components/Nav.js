@@ -18,6 +18,7 @@ export default class Nav extends Component {
       <div>
         <NavLink to='' style={link} activeStyle={active}>Home</NavLink>
         <NavLink to='/thoughts' style={link} activeStyle={active}>Thoughts</NavLink>
+        <NavLink to='/register' style={link} activeStyle={active}>Register</NavLink>
       </div>
     )
   }
