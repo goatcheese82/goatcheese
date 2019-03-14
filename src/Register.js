@@ -5,7 +5,7 @@ import store from './store'
 
 
 
-class App extends Component {
+class Register extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -19,4 +19,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Register;

@@ -2,10 +2,10 @@ import { userTypes } from './types'
 
 export const fetchUsers = () => dispatch => {
     fetch('http://localhost:3001/users')
-    .then(res => res.json())
-    .then(Users => dispatch({
+    .then(res => res.json(), console.log())
+    .then(users => dispatch({
         type: userTypes.FETCH_USERS,
-        payload: Users
+        payload: users
     })); 
 }
 

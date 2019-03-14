@@ -48,6 +48,11 @@ Label {
   width: 100%;
 }
 
+.nav-bar {
+  display: flex;
+  background-color: #61dafb;
+}
+
 .post {
   display: flex;
   background-color: aqua;

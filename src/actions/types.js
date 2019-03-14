@@ -7,8 +7,5 @@ export const postTypes = {
 //Users
 
 export const userTypes = {
-    LOGIN_REQUEST: 'USERS_LOGIN_REQUEST',
-    LOGIN_SUCCESS: 'USERS_LOGIN_SUCCESS'
-
-
+    FETCH_USERS: 'FETCH_USERS'
 }
