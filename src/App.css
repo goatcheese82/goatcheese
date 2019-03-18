@@ -64,6 +64,18 @@ Label {
   padding: 10px;
 }
 
+.user {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  border-bottom: 4px red;
+  justify-content: left;
+  align-content: space-between;
+  color: #8822ff;
+  text-shadow: 1px 1px #000;
+  padding: 10px;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
