@@ -10,7 +10,7 @@ class Users extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.newUser) {
-      this.props.users.unshift(nextProps.newUser)
+      this.props.users.push(nextProps.newUser)
 
     }
   }

@@ -7,5 +7,6 @@ export const postTypes = {
 //Users
 
 export const userTypes = {
-    FETCH_USERS: 'FETCH_USERS'
+    FETCH_USERS: 'FETCH_USERS',
+    NEW_USER: 'NEW_USER'
 }
