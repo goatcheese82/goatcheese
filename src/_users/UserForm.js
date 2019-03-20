@@ -23,7 +23,7 @@ class UserForm extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        const user= {
+        const user = {
             name: this.state.name,
             username: this.state.username,
             email: this.state.email,
@@ -38,33 +38,51 @@ class UserForm extends Component {
         })
 
     }
-  render() {
-    return (
-      <div>
-        <h1>Register</h1>
-        <form onSubmit={this.onSubmit}>
-            <div className='form-field'>
-                <label>Name: </label>
-                <input type='text' name='name' value={this.state.name} onChange={this.onChange}/>
-            </div>
-            <div className='form-field'>
-                <label>Username: </label>
-                <input type='text' name='username' value={this.state.username} onChange={this.onChange}></input>
-            </div>
-            <div className='form-field'>
-                <label>Email: </label>
-                <input type='text' name='email' value={this.state.email} onChange={this.onChange}/>
-            </div>
-            <div className='form-field'>
-                <label>Password: </label>
-                <input type='password' name='password' value={this.state.password} onChange={this.onChange}></input>
-            </div>
-            <button type='submit'>Submit</button>
+    render() {
+        return (
+            <div>
+                <h1>Register</h1>
+                <form onSubmit={this.onSubmit}>
+                    <div className='form-field'>
+                        <label>Name: </label>
+                        <input
+                            type='text'
+                            name='name'
+                            value={this.state.name}
+                            onChange={this.onChange} />
+                    </div>
+                    <div className='form-field'>
+                        <label>Username: </label>
+                        <input
+                            type='text'
+                            name='username'
+                            value={this.state.username}
+                            onChange={this.onChange}>
+                        </input>
+                    </div>
+                    <div className='form-field'>
+                        <label>Email: </label>
+                        <input
+                            type='text'
+                            name='email'
+                            value={this.state.email}
+                            onChange={this.onChange} />
+                    </div>
+                    <div className='form-field'>
+                        <label>Password: </label>
+                        <input
+                            type='password'
+                            name='password'
+                            value={this.state.password}
+                            onChange={this.onChange}>
+                        </input>
+                    </div>
+                    <button type='submit'>Submit</button>
 
-        </form>
-      </div>
-    )
-  }
+                </form>
+            </div>
+        )
+    }
 }
 
 export default connect(null, { newUser })(UserForm);

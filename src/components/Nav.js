@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import UserLogin from '../_users/UserLogin';
 
 const link = {
   background: '#61dafb',
@@ -18,8 +19,8 @@ export default class Nav extends Component {
       <div className='nav-bar'>
         <NavLink to='/home' style={link} activeStyle={active}>Home</NavLink>
         <NavLink to='/thoughts' style={link} activeStyle={active}>Thoughts</NavLink>
-        <NavLink to='/register' style={link} activeStyle={active}>Register</NavLink>
         <NavLink to='/user' style={link} activeStyle={active}>Users</NavLink>
+        <UserLogin />
       </div>
     )
   }

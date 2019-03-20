@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 class UserLogin extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class UserLogin extends Component {
   }
 
   onSubmit(e) {
-    
+
   }
 
 
@@ -25,7 +25,26 @@ class UserLogin extends Component {
   render() {
     return (
       <div>
-        
+
+        <form onSubmit={this.onSubmit}>
+          <div className='login-field'>
+            <label>Username:</label>
+            <input
+              type='text'
+              name='username'
+              value={this.state.username}
+              onChange={this.onChange} />
+          </div>
+          <div className='login-field'>
+            <label>Password:</label>
+            <input
+              type='text'
+              name='password'
+              value={this.state.password}
+              onChange={this.onChange} />
+          </div>
+          <button type='submit'>Submit</button>
+        </form>
       </div>
     )
   }
