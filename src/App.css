@@ -48,10 +48,28 @@ Label {
   width: 100%;
 }
 
+
+/*navigation*/
+
 .nav-bar {
-  display: flex;
+  display: flexbox;
+  flex-direction: row;
   background-color: #61dafb;
 }
+
+.login-container {
+  background-color: #61dafb;
+  display: flexbox;
+  justify-content: right;
+  flex-direction: row;
+}
+
+.login-field {
+  display: flexbox; 
+  width: 40%;
+}
+
+/*thoughts*/
 
 .post {
   display: flex;
@@ -83,11 +101,13 @@ Label {
   width: 100%;
 }
 
-form {
-  display: flexbox;
-  background-color: #8822ff;
-  width: 100%;
-}
+
+
+/*form {*/
+/*  display: flexbox;*/
+/*  background-color: #8822ff;*/
+/*  width: 100%;*/
+/*}*/
 
 input {
   width: 100%;

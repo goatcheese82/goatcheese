@@ -9,7 +9,7 @@ const link = {
 }
 
 const active = {
-  background: 'white',
+  background: '#68aafb',
   color: 'purple'
 }
 
