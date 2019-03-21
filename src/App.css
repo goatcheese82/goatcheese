@@ -5,7 +5,9 @@
   margin: auto;
 }
 
-
+a {
+  color: #8822ff;
+}
 
 h1 {
   color: #fff;
@@ -37,7 +39,7 @@ Label {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f3f3f3;
 }
 
 /*navigation*/
@@ -89,6 +91,7 @@ Label {
   padding: 10px;
 }
 
+
 .user {
   display: flex;
   flex-direction: column;
@@ -106,18 +109,12 @@ Label {
   justify-content: center;
   background-color: #8822ff;
   width: 100%;
+  padding-bottom: 10px;
 }
-
-
-
-/*form {*/
-/*  display: flexbox;*/
-/*  background-color: #8822ff;*/
-/*  width: 100%;*/
-/*}*/
 
 input {
   width: 100%;
+  margin-bottom: 4px;
 }
 
 textarea {
@@ -130,12 +127,14 @@ button {
   background-color: #8822ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*footer*/
+
+.footer {
+  display: flex;
+  background-color: #92ebbf;
+  height: 100px;
+  justify-content: center;
+  padding: 25px 10px 10px 10px;
+  text-align: center;
 }
 

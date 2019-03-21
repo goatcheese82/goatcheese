@@ -6,6 +6,7 @@ import ThoughtsPage from './ThoughtsPage'
 import Register from './Register';
 import UsersPage from './UsersPage';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path="/home" component={Home} />
           </React.Fragment>
         </Router>
+        < Footer />
         
       </div>
     );

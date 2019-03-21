@@ -23,7 +23,7 @@ export default class Nav extends Component {
           <NavLink to='/user' style={link} activeStyle={active}>Users</NavLink>
         </div>
         <div className='login-container'>
-        <UserLogin />
+          <UserLogin />
         </div>
       </div>
     )
