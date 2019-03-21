@@ -1,7 +1,7 @@
 import { userTypes } from './types'
 
 export const fetchUsers = () => dispatch => {
-    fetch('https://desolate-woodland-34365.herokuapp.com//users')
+    fetch('http://localhost:3001/users')
     .then(res => res.json(), console.log())
     .then(users => dispatch({
         type: userTypes.FETCH_USERS,
@@ -10,7 +10,7 @@ export const fetchUsers = () => dispatch => {
 }
 
 export const newUser = userData => dispatch => {
-fetch('https://desolate-woodland-34365.herokuapp.com//users', {
+fetch('http://localhost:3001/users', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

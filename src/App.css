@@ -83,7 +83,7 @@ Label {
 .post {
   display: flex;
   background-color: aqua;
-  border-bottom: 4px red;
+  border-bottom: 1px solid #8822ff;
   justify-content: left;
   align-content: space-between;
   color: #8822ff;
@@ -96,7 +96,7 @@ Label {
   display: flex;
   flex-direction: column;
   background-color: aqua;
-  border-bottom: 4px red;
+  border-bottom: 1px solid #8822ff;
   justify-content: left;
   align-content: space-between;
   color: #8822ff;
