@@ -17,10 +17,14 @@ export default class Nav extends Component {
   render() {
     return (
       <div className='nav-bar'>
-        <NavLink to='/home' style={link} activeStyle={active}>Home</NavLink>
-        <NavLink to='/thoughts' style={link} activeStyle={active}>Thoughts</NavLink>
-        <NavLink to='/user' style={link} activeStyle={active}>Users</NavLink>
+        <div className='nav-links'>
+          <NavLink to='/home' style={link} activeStyle={active}>Home</NavLink>
+          <NavLink to='/thoughts' style={link} activeStyle={active}>Thoughts</NavLink>
+          <NavLink to='/user' style={link} activeStyle={active}>Users</NavLink>
+        </div>
+        <div className='login-container'>
         <UserLogin />
+        </div>
       </div>
     )
   }

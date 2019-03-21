@@ -24,7 +24,7 @@ class UserLogin extends Component {
 
   render() {
     return (
-      <div className='login-container'>
+      <div>
 
         <form onSubmit={this.onSubmit}>
           <div className='login-field'>

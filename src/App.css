@@ -40,6 +40,36 @@ Label {
   color: #61dafb;
 }
 
+/*navigation*/
+
+.nav-bar {
+  display: flex;
+  background-color: #61dafb;
+  align-content: center;
+}
+
+.nav-links {
+  display: flex;
+  font-size: 1.2em;
+}
+
+.login-container {
+  margin: 5px;
+  background-color: #61dafb;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.login-field {
+  display: flex;
+  width: 80%;
+  padding-bottom: 4px;
+  justify-content: right;
+}
+
+/*thoughts*/
+
 .post-container {
   display: flex;
   justify-content: center;
@@ -47,29 +77,6 @@ Label {
   background-color: aliceblue;
   width: 100%;
 }
-
-
-/*navigation*/
-
-.nav-bar {
-  display: flexbox;
-  flex-direction: row;
-  background-color: #61dafb;
-}
-
-.login-container {
-  background-color: #61dafb;
-  display: flexbox;
-  justify-content: right;
-  flex-direction: row;
-}
-
-.login-field {
-  display: flexbox; 
-  width: 40%;
-}
-
-/*thoughts*/
 
 .post {
   display: flex;
@@ -118,10 +125,11 @@ textarea {
 }
 
 button {
+  display: flex;
   padding: 5px;
-  margin-bottom: 15px;
-  background-color: 
+  background-color: #8822ff;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
