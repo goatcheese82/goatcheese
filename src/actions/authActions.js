@@ -27,24 +27,27 @@ function loginError(message) {
     }
 }
 
-export const loginUser = (creds) => dispatch => {
+export const loginUser = creds => dispatch => {
+
     dispatch(requestLogin(creds))
-    return fetch('http://localhost:3001/sessions/create', {
+    return fetch('http://localhost:3001/auth/login', {
         method: 'Post',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: JSON.stringify(creds)
+        body: `username=${creds.username}&password=${creds.password}`
     })
         .then(res => res.json()
         .then(user => ({ user, res })))
         .then(({ user, res })  => {
+            console.log(user, res)
             if (!res.ok) {
                 dispatch(loginError(user.message))
-                return Promise.regect(user)
+                return Promise.reject(user)
             }
             else {
                 localStorage.setItem('id_token', user.id_token)
                 localStorage.setItem('id_token', user.access_token)
-                dispatchEvent(receiveLogin(user))
+                dispatch(receiveLogin(user))
+                alert(`${user.message}`)
             }
         }).catch(err => console.log("Error: ", err))
 }

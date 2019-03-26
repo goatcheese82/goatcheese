@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Users from './_users/Users';
-import UserForm from './_users/UserForm'
+import Users from './Users';
+import UserForm from './UserForm'
 
 
 

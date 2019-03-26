@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Posts from './_thoughts/Posts';
-import PostForm from './_thoughts/PostForm';
+import Posts from './Posts';
+import PostForm from './PostForm';
 
 export default class ThoughtsPage extends Component {
     render() {

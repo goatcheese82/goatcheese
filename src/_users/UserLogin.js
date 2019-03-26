@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component} from 'react';
+import { connect } from 'react-redux';
+import { loginUser } from '../actions/authActions'
 
 class UserLogin extends Component {
   constructor(props) {
@@ -17,7 +19,12 @@ class UserLogin extends Component {
   }
 
   onSubmit(e) {
-
+    e.preventDefault();
+    const auth = {
+      username: this.state.username,
+      password: this.state.password
+    };
+    this.props.loginUser(auth)
   }
 
 
@@ -38,7 +45,7 @@ class UserLogin extends Component {
           <div className='login-field'>
             <label>Password:</label>
             <input
-              type='text'
+              type='password'
               name='password'
               value={this.state.password}
               onChange={this.onChange} />
@@ -50,4 +57,4 @@ class UserLogin extends Component {
   }
 }
 
-export default UserLogin;
+export default connect(null, { loginUser })(UserLogin);

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import ThoughtsPage from './ThoughtsPage'
+import Home from './components/Home';
+import ThoughtsPage from './_thoughts/ThoughtsPage'
 import Register from './Register';
-import UsersPage from './UsersPage';
+import UsersPage from './_users/UsersPage';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 
