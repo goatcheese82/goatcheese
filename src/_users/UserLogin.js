@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import { loginUser } from '../actions/authActions'
 
 class UserLogin extends Component {
@@ -31,7 +32,7 @@ class UserLogin extends Component {
 
   render() {
     return (
-      <div>
+      <div className='form-container'>
 
         <form onSubmit={this.onSubmit}>
           <div className='login-field'>
@@ -52,7 +53,11 @@ class UserLogin extends Component {
           </div>
           <button type='submit'>Submit</button>
         </form>
+        <div className='App-link'>
+        <NavLink to='/register'>Register</NavLink>
       </div>
+      </div>
+
     )
   }
 }

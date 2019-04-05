@@ -58,7 +58,8 @@ Label {
 .login-container {
   margin: 5px;
   background-color: #61dafb;
-  display: flex;
+  /*display: flex;*/
+  position: relative;
   justify-content: right;
   width: 100%;
 }

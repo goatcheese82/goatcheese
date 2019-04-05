@@ -7,6 +7,7 @@ import Register from './Register';
 import UsersPage from './_users/UsersPage';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import UserLogin from './_users/UserLogin';
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/user" component={UsersPage} />
             <Route exact path="/home" component={Home} />
+            <Route exact path="/login" component={UserLogin} />
           </React.Fragment>
         </Router>
         < Footer />

@@ -41,11 +41,13 @@ export const loginUser = creds => dispatch => {
             console.log(user, res)
             if (!res.ok) {
                 dispatch(loginError(user.message))
+                alert(`${user.message}`)
                 return Promise.reject(user)
             }
             else {
-                localStorage.setItem('id_token', user.id_token)
-                localStorage.setItem('id_token', user.access_token)
+                localStorage.setItem('id_token', user.token)
+                //localStorage.setItem('id_token', user.access_token)
+                debugger
                 dispatch(receiveLogin(user))
                 alert(`${user.message}`)
             }

@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { newUser } from '../actions/userActions';
 import { connect } from 'react-redux';
+import FileInput from '../_helpers/fileInput';
 
 class UserForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            username: '',
-            email: '',
-            password: ''
+            user: {
+                name: '',
+                username: '',
+                email: '',
+                password: '',
+                image: null
+            }
 
         }
         this.onChange = this.onChange.bind(this);
@@ -17,6 +21,7 @@ class UserForm extends Component {
     }
 
     onChange(e) {
+        e.preventDefault()
         this.setState({ [e.target.name]: e.target.value })
     }
 
@@ -27,21 +32,30 @@ class UserForm extends Component {
             name: this.state.name,
             username: this.state.username,
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            image: this.state.image
         };
         this.props.newUser(user)
+        debugger
         this.setState({
             name: '',
             username: '',
             email: '',
-            password: ''
+            password: '',
+            image: ''
         })
+    }
 
+    fileSubmit = (e) => {
+        e.preventDefault()
+        this.setState( { image: this.fileInput.current.files[0] })
+        console.log(this.state.image)
     }
     render() {
         return (
             <div>
                 <h1>Register</h1>
+                < FileInput />
                 <form onSubmit={this.onSubmit}>
                     <div className='form-field'>
                         <label>Name: </label>
