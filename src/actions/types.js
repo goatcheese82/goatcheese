@@ -1,7 +1,9 @@
 //Post
 export const postTypes = {
     FETCH_POSTS: 'FETCH_POSTS',
-    NEW_POST: 'NEW_POST'
+    NEW_POST: 'NEW_POST',
+    FILTER_BY: 'FILTER_BY',
+    DELETE_POST: 'DELETE_POST'
 }
 
 //Users

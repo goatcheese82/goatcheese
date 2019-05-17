@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Posts from './Posts';
 import PostForm from './PostForm';
 
-export default class ThoughtsPage extends Component {
-    render() {
-        return (
+const ThoughtsPage = () => (
             <div>
                 <div className="App">
                     <div className='blog'>
@@ -18,5 +16,6 @@ export default class ThoughtsPage extends Component {
                 </div>
             </div>
         )
-    }
-}
+
+
+export default ThoughtsPage

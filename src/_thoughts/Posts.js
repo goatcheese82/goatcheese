@@ -1,33 +1,36 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/postActions';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { fetchPosts } from "../actions/postActions";
+import { getFilteredPosts } from "../actions/postActions";
+import { deletePost } from "../actions/postActions";
+import PostPreview from "./PostPreview";
 
 class Posts extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchPosts();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.newPost) {
-      this.props.posts.push(nextProps.newPost)
-
-    }
-  }
+  renderPosts = () =>
+    this.props.posts.map((post, id) => (
+      <PostPreview
+        post={post}
+        key={post.id}
+        deletePost={this.props.deletePost}
+      />
+    ));
 
   render() {
-    const postItems = this.props.posts.map(post => (
-      <div key={post.id} className='post'>
-        <h3>{post.my_time}</h3>
-        <h2>{post.title}</h2>
-        <p>{post.content}</p>
-      </div>
-    ))
-    return (
-      <div>
-        {postItems}
-      </div>
-    )
+    if (!this.props.filter) {
+      return (
+        <div>
+          <button onClick={this.props.getFilteredPosts}>Sort</button>
+          {this.renderPosts()}
+        </div>
+      );
+    } else {
+      return <div />;
+    }
   }
 }
 
@@ -35,11 +38,17 @@ Posts.propTypes = {
   fetchPosts: PropTypes.func.isRequired,
   posts: PropTypes.array.isRequired,
   newPost: PropTypes.object
-}
+};
 
 const mapStateToProps = state => ({
   posts: state.posts.items,
-  newPost: state.posts.item
+  newPost: state.posts.item,
+  filter: state.posts.filter
 });
 
-export default connect(mapStateToProps, { fetchPosts })(Posts);
+export default connect(
+  mapStateToProps,
+  { fetchPosts, getFilteredPosts, deletePost }
+)(Posts);
+
+//getFilteredPosts(state.posts.items, state.filter)
