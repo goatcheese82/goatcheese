@@ -12,7 +12,7 @@ class Posts extends Component {
   }
 
   renderPosts = () =>
-    this.props.posts.map((post, id) => (
+    this.props.posts.map((post) => (
       <PostPreview
         post={post}
         key={post.id}
@@ -24,7 +24,8 @@ class Posts extends Component {
     if (!this.props.filter) {
       return (
         <div>
-          <button onClick={this.props.getFilteredPosts}>Sort</button>
+          <button onClick={() => this.props.getFilteredPosts('alpha')} value='alpha'>Sort By Title</button>
+          <button onClick={() => this.props.getFilteredPosts('date')} value='date'>Sort By Date</button>
           {this.renderPosts()}
         </div>
       );
@@ -43,7 +44,7 @@ Posts.propTypes = {
 const mapStateToProps = state => ({
   posts: state.posts.items,
   newPost: state.posts.item,
-  filter: state.posts.filter
+  //filter: state.posts.filter
 });
 
 export default connect(

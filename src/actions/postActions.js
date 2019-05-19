@@ -44,7 +44,7 @@ export const deletePost = id => dispatch => {
     );
 };
 
-export const getFilteredPosts = filter => ({
-    type: postTypes.FILTER_BY,
-    filter
+export const getFilteredPosts = filter => dispatch => dispatch({
+  type: postTypes.FILTER_BY,
+  payload: filter
 })
