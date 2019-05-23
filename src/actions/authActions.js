@@ -30,7 +30,7 @@ function loginError(message) {
 export const loginUser = creds => dispatch => {
 
     dispatch(requestLogin(creds))
-    return fetch('http://localhost:3001/auth/login', {
+    return fetch('http://desolate-woodland-34365.herokuapp.com/auth/login', {
         method: 'Post',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `username=${creds.username}&password=${creds.password}`

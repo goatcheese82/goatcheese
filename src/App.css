@@ -5,6 +5,12 @@
   margin: auto;
 }
 
+/* Home */
+
+.comment {
+  background-color: #fff;
+}
+
 a {
   color: #8822ff;
 }

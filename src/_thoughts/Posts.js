@@ -24,7 +24,9 @@ class Posts extends Component {
     if (!this.props.filter) {
       return (
         <div>
-          <button onClick={() => this.props.getFilteredPosts('alpha')} value='alpha'>Sort By Title</button>
+          <div className='sort-button'>
+          <button onClick={() => this.props.getFilteredPosts('alpha')} value='alpha'>Sort By Content</button>
+          </div>
           <button onClick={() => this.props.getFilteredPosts('date')} value='date'>Sort By Date</button>
           {this.renderPosts()}
         </div>

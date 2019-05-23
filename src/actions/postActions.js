@@ -1,7 +1,7 @@
 import { postTypes } from "./types";
 
 export const fetchPosts = () => dispatch => {
-  fetch("http://localhost:3001/posts")
+  fetch("http://desolate-woodland-34365.herokuapp.com/posts")
     .then(res => res.json())
     .then(posts =>
       dispatch({
@@ -12,7 +12,7 @@ export const fetchPosts = () => dispatch => {
 };
 
 export const newPost = postData => dispatch => {
-  fetch("http://localhost:3001/posts", {
+  fetch("http://desolate-woodland-34365.herokuapp.com/posts", {
     method: "POST",
     headers: {
       "content-type": "application/json"
@@ -29,7 +29,7 @@ export const newPost = postData => dispatch => {
 };
 
 export const deletePost = id => dispatch => {
-  fetch(`http://localhost:3001/posts/${id}`, {
+  fetch(`http://desolate-woodland-34365.herokuapp.com/posts/${id}`, {
     method: "DELETE",
     headers: {
       "content-type": "application/json"
